@@ -107,12 +107,19 @@ public class Film {
 		this.special_features = special_features;
 	}
 	@Override
+	
 	public String toString() {
-		return "Film [id=" + id + ", title=" + title + ", description=" + description + ", release_year=" + release_year
-				+ ", language=" + language + ", rental_duration=" + rental_duration + ", rental_rate=" + rental_rate
-				+ ", length=" + length + ", replacement_cost=" + replacement_cost + ", rating=" + rating
-				+ ", special_features=" + special_features + ", actors=" + actors + "]";
+		String toString = "\n\n\n#"+id +" "+title+"\n\n"+"Release Year: "+release_year+ "\tRating: "+rating+" \nDescription: "+description+ "\nLanguage: "+language+
+				"\n\nActors:\n";
+		for (Actor actor : actors) {
+			
+			toString += actor;
+			
+		}
+		return toString;
 	}
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -187,6 +194,36 @@ public class Film {
 			return false;
 		return true;
 	}
-	
+//	@Override
+//	public String toString() {
+//		StringBuilder builder = new StringBuilder();
+//		builder.append(id);
+//		builder.append(", title=");
+//		builder.append(title);
+//		builder.append(", description=");
+//		builder.append(description);
+//		builder.append(", release_year=");
+//		builder.append(release_year);
+//		builder.append(", language=");
+//		builder.append(language);
+//		builder.append(", rental_duration=");
+//		builder.append(rental_duration);
+//		builder.append(", rental_rate=");
+//		builder.append(rental_rate);
+//		builder.append(", length=");
+//		builder.append(length);
+//		builder.append(", replacement_cost=");
+//		builder.append(replacement_cost);
+//		builder.append(", rating=");
+//		builder.append(rating);
+//		builder.append(", special_features=");
+//		builder.append(special_features);
+//		builder.append(", actors=");
+//		for (Actor actor : actors) {
+//			builder.append(actor);
+//		}
+//		return builder.toString();
+//	}
+//	
 	
 }
