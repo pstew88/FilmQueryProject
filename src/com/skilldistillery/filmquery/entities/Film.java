@@ -85,6 +85,9 @@ public class Film {
 	public List<Actor> getActors() {
 		return actors;
 	}
+	public Film() {
+		super();
+	}
 	public void setActors(List<Actor> actors) {
 		this.actors = actors;
 	}

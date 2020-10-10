@@ -8,6 +8,7 @@ public class Actor {
 	private String firstName;
 	private String lastName;
 	private List <Film> films;
+	
 	public int getId() {
 		return id;
 	}
@@ -32,16 +33,16 @@ public class Actor {
 	public void setFilms(List<Film> films) {
 		this.films = films;
 	}
-	public Actor(int id, String firstName, String lastName, List<Film> films) {
+	public Actor(int id, String firstName, String lastName) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.films = films;
+		
 	}
 	@Override
 	public String toString() {
-		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", films=" + films + "]";
+		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName +"]";
 	}
 	@Override
 	public int hashCode() {
@@ -80,6 +81,9 @@ public class Actor {
 		} else if (!lastName.equals(other.lastName))
 			return false;
 		return true;
+	}
+	public Actor() {
+		super();
 	}
 	
 }
